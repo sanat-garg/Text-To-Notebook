@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div style="background-image: url(page.jpg);width: 710px;
+height: 900px">
+</div>
+
+
+
+
+<textarea type="text" name="" style="background: white;position: absolute;top: 200px;
+left: 1000px" id="source" oninput="copyData('source', 'target')"  name="my-xml-editor" data-editor="xml" data-gutter="1" rows="15" ></textarea>
+
+</body>
+<style type="text/css">
+	#target,#topichere{
+		font-family: Hand;
+	}
+
+	@font-face {
+		font-family: Hand;
+		src: url('DancingScript-VariableFont_wght.ttf');
+	}
+	</style>
+
+
+<div id="target" style="line-height: 35.7px;font-size: 20px;z-index: 21;position: absolute;top: 131.4px;
+left: 120px;width: 520px;color: #2155cd;"></div>
+
+
+<div id="topichere" style="line-height: 35.7px;font-size: 20px;z-index: 21;color: black;text-align: center;width:760px;height: 900px;position: absolute;top: 60px;
+left: 0px"></div>
+
+<script type="text/javascript">
+ function copyData(sourceId, targetId) {
+        var data = document.getElementById(sourceId).value;
+        document.getElementById(targetId).innerHTML = data;
+      }
+function copyData(topicId, topichereId) {
+        var data = document.getElementById(topicId).value;
+        document.getElementById(topichereId).innerHTML = data;
+      }
+</script>
+
+<textarea type="text" name="" style="background: white;position: absolute;top: 400px;
+left: 1000px" id="topic" oninput="copyData('topic', 'topichere')"  name="my-xml-editor" data-editor="xml" data-gutter="1" rows="15" placeholder="Topic" ></textarea>
+<button id="submer">Sanat</button>
+<script type="text/javascript">
+	var button = $("#submer");
+button.on("click", function() {
+  button.data("text", button.text());
+  button.text(button.data("text-swap"));
+});
+</script>
