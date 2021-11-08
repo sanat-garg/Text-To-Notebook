@@ -19,7 +19,7 @@
 	function copyData(topicId, topichereId) {var data = document.getElementById(topicId).value;document.getElementById(topichereId).innerHTML = data;}
 </script>
 
-<textarea type="text" style="background: white;position: absolute;top: 400px;left: 1000px" id="topic" oninput="copyData('topic', 'topichere')"  name="my-xml-editor" data-editor="xml" data-gutter="1" rows="15" placeholder="Topic" ></textarea>
+<textarea type="text" style="background: white;position: absolute;top: 400px;left: 1000px" id="topic" oninput="copyData('topic', 'topichere')"  name="my-xml-editor" data-editor="xml" data-gutter="1" rows="15" placeholder="Topic" ></textarea
 <button id="submer">Click</button>
 <script type="text/javascript">
 	var button = $("#submer");button.on("click", function() {button.data("text", button.text());button.text(button.data("text-swap"));});
